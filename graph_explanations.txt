@@ -1,0 +1,10 @@
+
+GAIT ANALYSIS GRAPH EXPLANATIONS
+--------------------------------
+1. Kinematic Symmetry: Shows how the 'Slave' knee mimics the 'Master' with a phase shift.
+2. Feature Importance: Identifies 'Master Knee' and 'Force' as top predictors.
+3. Phase Portrait: Visualizes the 'Walking Orbit' of the IMU sensors.
+4. Force/Angle Relation: Shows joint behavior under loading.
+5. Heatmap: Statistical inter-dependencies of sensors.
+6. Impact Timing: Crucial for fine-tuning heel-strike detection.
+7. Boxplots: ROM (Range of Motion) stats for Stance vs Swing.
