@@ -71,3 +71,18 @@ plt.show()
 
 # Save for conversion
 model.save("epic_prosthetic_model.h5")
+
+# --- EXTRACT SCALER VALUES FOR C++ ---
+print("\n" + "="*50)
+print(" 📋 COPY THIS BLOCK INTO YOUR ARDUINO ESP32 CODE ")
+print("="*50)
+
+# features = ['accel_z', 'gyro_y', 'force_z', 'master_knee']
+means = scaler.mean_
+stds = scaler.scale_
+
+print(f"const float ACCEL_MEAN = {means[0]:.6f}; const float ACCEL_STD = {stds[0]:.6f};")
+print(f"const float GYRO_MEAN  = {means[1]:.6f}; const float GYRO_STD  = {stds[1]:.6f};")
+print(f"const float FORCE_MEAN = {means[2]:.6f}; const float FORCE_STD = {stds[2]:.6f};")
+print(f"const float KNEE_MEAN  = {means[3]:.6f}; const float KNEE_STD  = {stds[3]:.6f};")
+print("="*50 + "\n")
